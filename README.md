@@ -7,7 +7,7 @@ Full contest description:
 http://cvrc.ece.utexas.edu/SDHA2010/Human_Interaction.html
 
 Histogram of Oriented Gradients (HOG) image descriptors and a Linear Support Vector Machines (SVMs) [1] can be combined to create highly accurate classifiers.
-Therefore i chose to apply the HOG + SVM methodology due to its robustness when in classifying images (frames).
+Therefore i chose to apply the HOG + SVM methodology due to its robustness when the task is to classify images (frames).
 
 Furthermore, each video is represented as a sequence of frames, which on their hand are represented by a bag-of-visual-words (BoW) model [2]. This provides us a vocabulary over the "vocabulary" present in the frame.
 Note that the vocabulary here consists of the features which are first extracted from the image. By applying this transformation we loose both time and spatil arrangement information of the video, which are shown to be irrelevant to solve the contest task.
