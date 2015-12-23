@@ -25,6 +25,8 @@ The approach then follows simple rules:
   For a N-moment scheme train N classifiers setting up the data accordingly
   10-fold cross validation was employed
 
+Each classifier votes for a label at each momement. The most voted class is chosen as the estimated class. More weight is given on the core (middle) moments of the action.
+
 The results show that diving the action in N=5 steps is enought to accuratly classify a human action.
 
 Subject to optimization, one can identify:
