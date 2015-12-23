@@ -1,0 +1,38 @@
+%% define root folder
+clear
+rootFolder = 'DB\segmented_set1\';
+% # of moments
+moments = 4;
+
+for i=1:
+    
+    % get images sets and label them
+    %% 1st moment
+    targetFolder = strcat(rootFolder, num2str(i), 'Moment');
+    huggingImageSet = imageSet(fullfile(targetFolder, 'hugging'));
+    punchingImageSet = imageSet(fullfile(targetFolder, 'punching'));
+    pointingImageSet = imageSet(fullfile(targetFolder, 'pointing'));
+    %pushingImageSet = imageSet(fullfile(targetFolder, 'pushing'));
+    %handImageSet = imageSet(fullfile(targetFolder, 'handShaking'));
+    %kikcingImageSet = imageSet(fullfile(targetFolder, 'kicking'));
+
+    % Display a few images
+    helperDisplayImageMontage(huggingImageSet.ImageLocation(1:1:huggingImageSet.Count));
+    helperDisplayImageMontage(punchingImageSet.ImageLocation(1:1:punchingImageSet.Count));
+    % array of all image set
+    imgSets = [huggingImageSet, punchingImageSet, pointingImageSet];
+    % display labels and image counting
+    disp({imgSets.Description})
+    disp([imgSets.Count])
+
+    %bag of features for the i-th moment
+    create_bow = sprintf('bag_moment%d = bagOfFeatures(imgSets);'
+    
+
+
+save test.mat
+
+
+
+
+
